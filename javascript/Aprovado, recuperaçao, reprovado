@@ -1,0 +1,21 @@
+
+function App() {
+  let nota = Number(prompt("Digite sua nota:"));
+  let mensagem = "";
+
+  if (nota >= 4 && nota <= 6) {
+    mensagem = "Recuperação";
+  } else if (nota >= 7 && nota <= 12) {
+    mensagem = "Aprovado";
+  } else {
+    mensagem = "Reprovado";
+  }
+
+  return (
+    <div>
+      <h1>{mensagem}</h1>
+    </div>
+  );
+}
+
+export default App;
