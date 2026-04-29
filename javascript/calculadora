@@ -1,0 +1,40 @@
+function App() {
+  let n1 =24;
+  let n2=24;
+
+  function somar(){
+
+    return n1 +n2;
+  }
+
+  function subtrair(){
+
+    return n1-n2;
+
+  }
+
+  function multiplicar(){
+
+    return n1*n2;
+  }
+
+  function divisão(){
+
+    return n1/n2;
+
+  }
+
+  return(
+    <div>
+      <h1>TABUADA</h1>
+      <p>Soma: {somar()}</p>
+      <p>Subtrair: {subtrair()}</p>
+      <p>Multiplicar: {multiplicar()}</p>
+      <p>Divisão: {divisão()}</p>
+    </div>
+
+  );
+ 
+}
+
+export default App;
