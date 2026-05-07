@@ -1,0 +1,49 @@
+import { useState } from "react";
+
+function App() {
+  const [nome, setNome] = useState("");
+  const [idade, setIdade] = useState("");
+
+  const [nomeConfirmado, setNomeConfirmado] = useState("");
+  const [idadeConfirmada, setIdadeConfirmada] = useState("");
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Nome"
+        value={nome}
+        onChange={(e) => setNome(e.target.value)}
+      />
+
+      <input
+        type="number"
+        placeholder="Idade"
+        value={idade}
+        onChange={(e) => setIdade(e.target.value)}
+      />
+
+      <button
+        onClick={() => {
+          setNomeConfirmado(nome);
+          setIdadeConfirmada(idade);
+        }}
+      >
+        Cadastrar
+      </button>
+
+      <hr />
+
+      <h2>Nome: {nomeConfirmado}</h2>
+      <h2>Idade: {idadeConfirmada}</h2>
+
+      {idadeConfirmada >= 18 ? (
+        <h3>Maior de idade</h3>
+      ) : idadeConfirmada !== "" ? (
+        <h3>Menor de idade</h3>
+      ) : null}
+    </div>
+  );
+}
+
+export default App;
